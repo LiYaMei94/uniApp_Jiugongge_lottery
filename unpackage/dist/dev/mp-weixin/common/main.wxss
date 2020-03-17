@@ -1,0 +1,53 @@
+
+._a {
+  text-decoration: none !important;
+}
+/* li {
+  list-style: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+} */
+page,
+page {
+  height: 100%;
+  /*点击出现的半透明背景*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* background-color: #edf2f6; */
+}
+button {
+  outline: none;
+}
+:focus {
+  outline: 0;
+}
+input {
+  border: 0;
+  /*去除未选中状态边框*/
+  outline: none;
+  /*去除选中状态边框*/
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+._h1,
+._h2,
+._h3,
+._h4,
+._h5,
+._h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #333132;
+  /* color: #515365; */
+}
+._em, ._i, ._u{
+	font-style: normal;
+}
+

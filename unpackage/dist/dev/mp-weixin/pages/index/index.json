@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "lottery-draw": "/components/SJ-LotteryDraw/SJ-LotteryDraw"
+  }
+}
