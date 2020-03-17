@@ -4,7 +4,7 @@
 九宫格抽奖，可自定义速度和抽奖位置
 # 简介
 九宫格抽奖，可自定义速度、抽奖位置。
-# [gitlab地址](https://git.lug.ustc.edu.cn/LiYaMei94/jiugongge_lottery)
+<!-- # [gitlab地址](https://git.lug.ustc.edu.cn/LiYaMei94/jiugongge_lottery)-->
 <!-- # [演示地址](https://git.lug.ustc.edu.cn/LiYaMei94/jiugongge_lottery) -->
 # SJ-LotteryDraw
 ## SJ-LotteryDraw组件参数说明
