@@ -90,13 +90,18 @@ export default {
 		
 	},
 	onLoad() {
-		console.log(this)
+		console.log(this.lottery_draw_param)
 	},
 	
 	methods: {
 		luck_draw(event) {
 			let index = event.currentTarget.dataset.index;
 			if (index == 8) {
+				
+				// 在这里拿到停止的位置,然后修改父组件中lottery_draw_param的值
+				this.$emit('get_winingIndex',6);
+				console.log(this.lottery_draw_param)
+				
 				let that = this;
 				let win = new LotteryDraw({
 					domData:that.grid_info_arr,
@@ -116,6 +121,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 @import './SJ-LotteryDraw.css';
 </style>
