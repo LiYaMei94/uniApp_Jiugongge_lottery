@@ -122,7 +122,7 @@ $grid_Ball_margin: 10upx; //球与球之间的距离
 ```javascript
 <template>
 	<view class="content">
-		<LotteryDraw @luck_draw_finish='luck_draw_finish'></LotteryDraw>
+		<LotteryDraw @get_winingIndex='get_winingIndex' :lottery_draw_param='lottery_draw_param' @luck_draw_finish='luck_draw_finish'></LotteryDraw>
 	</view>
 </template>
 
@@ -135,13 +135,28 @@ export default {
 	data() {
 		return {
 			
+			lottery_draw_param:{
+				startIndex: 0, //开始抽奖位置，从0开始
+				totalCount: 4, //一共要转的圈数
+				winingIndex: 4, //中奖的位置，从0开始
+				speed: 50 //抽奖动画的速度 [数字越大越慢,默认100]
+			}
 		};
 	},
 	onLoad() {
+		
 	},
 	methods: {
+		// 修改获奖位置（可以在这里获取后台的数据
+		get_winingIndex(callback){
+			this.lottery_draw_param.winingIndex=7;
+			callback();
+		},
+		// 抽奖完成
 		luck_draw_finish(param){
+			
 			console.log(param)
+			// console.log(`抽到第${param+1}个方格的奖品`)
 		}
 		
 	}
@@ -157,6 +172,7 @@ export default {
 }
 
 </style>
+
 
 ```
 # 适应PC端

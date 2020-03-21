@@ -28,7 +28,7 @@ export default {
 		// 修改获奖位置（可以在这里获取后台的数据
 		get_winingIndex(callback){
 			this.lottery_draw_param.winingIndex=7;
-			callback(this.lottery_draw_param);
+			callback();
 		},
 		// 抽奖完成
 		luck_draw_finish(param){
