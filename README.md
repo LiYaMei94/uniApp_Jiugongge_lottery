@@ -1,11 +1,5 @@
 
-# 更新记录
-## 1.0.0（2020-03-16）
-九宫格抽奖，可自定义速度和抽奖位置
-# 简介
-九宫格抽奖，可自定义速度、抽奖位置。
-<!-- # [gitlab地址](https://git.lug.ustc.edu.cn/LiYaMei94/jiugongge_lottery)-->
-<!-- # [演示地址](https://git.lug.ustc.edu.cn/LiYaMei94/jiugongge_lottery) -->
+# [github地址](https://github.com/LiYaMei94/uniApp_Jiugongge_lottery)
 # SJ-LotteryDraw
 ## SJ-LotteryDraw组件参数说明
 |参数| 类型 |默认值
@@ -73,7 +67,7 @@ luck_draw_finish(param);//抽奖完成时触发，返回抽奖停留的格子信
 
 ## scss文件参数
 
-```css
+```scss
 $grid_wrap_bg: #9ad3ff; //九宫格背景色(包括边框色)
 $grid_wrap_inner_bg: #61a2fc; //九宫格内层背景色
 $grid_wrap_shadow: #89bbf7; //九宫格外层下边框阴影色
@@ -209,3 +203,4 @@ app.$mount()
 
 # 注意：
 - 在运行到小程序开发工具时请把main.js中的import pc from './utils/pc.js'注释掉
+- 我使用的是scss，如果没有安装scss，请务必将组件中的lang改为css，并引入@import './SJ-LotteryDraw.css'
