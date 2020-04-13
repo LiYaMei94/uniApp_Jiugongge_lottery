@@ -1,1 +1,1 @@
-<view class="content data-v-50a60105"><lottery-draw bind:luck_draw_finish="__e" vue-id="8dd740cc-1" data-event-opts="{{[['^luck_draw_finish',[['luck_draw_finish']]]]}}" class="data-v-50a60105" bind:__l="__l"></lottery-draw></view>
+<view class="content data-v-8020ddec"><lottery-draw bind:get_winingIndex="__e" bind:luck_draw_finish="__e" vue-id="8dd740cc-1" data-event-opts="{{[['^get_winingIndex',[['get_winingIndex']]],['^luck_draw_finish',[['luck_draw_finish']]]]}}" class="data-v-8020ddec" bind:__l="__l"></lottery-draw></view>

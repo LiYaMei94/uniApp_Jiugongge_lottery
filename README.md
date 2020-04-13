@@ -116,7 +116,7 @@ $grid_Ball_margin: 10upx; //球与球之间的距离
 ```javascript
 <template>
 	<view class="content">
-		<LotteryDraw @get_winingIndex='get_winingIndex' :lottery_draw_param='lottery_draw_param' @luck_draw_finish='luck_draw_finish'></LotteryDraw>
+		<LotteryDraw @get_winingIndex='get_winingIndex'  @luck_draw_finish='luck_draw_finish'></LotteryDraw>
 	</view>
 </template>
 
@@ -144,7 +144,8 @@ export default {
 		// 修改获奖位置（可以在这里获取后台的数据
 		get_winingIndex(callback){
 			this.lottery_draw_param.winingIndex=7;
-			callback();
+			//props修改在小程序和APP端不成功，所以在这里使用回调函数传参，
+			callback(this.lottery_draw_param);
 		},
 		// 抽奖完成
 		luck_draw_finish(param){

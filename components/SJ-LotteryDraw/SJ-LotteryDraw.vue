@@ -76,18 +76,6 @@
 					return grid_info
 				}
 			},
-			lottery_draw_param: {
-				type: Object,
-				default: function() {
-					return {
-						startIndex: 0, //开始抽奖位置，从0开始
-						totalCount: 4, //一共要转的圈数
-						winingIndex: 2, //中奖的位置，从0开始
-						speed: 50 //抽奖动画的速度 [数字越大越慢,默认100]
-					}
-				}
-			},
-
 		},
 		onLoad() {
 		},
@@ -99,14 +87,16 @@
 				if (index == 8) {
 					// 点击抽奖之后知道获奖位置，修改父组件中lottery_draw_param的值
 					this.$emit('get_winingIndex', function(res){
+						console.log(res);
+						let lottery_draw_param=res;
 						let win = new LotteryDraw({
 								domData: that.grid_info_arr,
-								...that.lottery_draw_param
+								...lottery_draw_param
 							},
 							function(index, count) {
 								that.current_index = index;
 								console.log()
-								if (that.lottery_draw_param.winingIndex == index && that.lottery_draw_param.totalCount == count) {
+								if (lottery_draw_param.winingIndex == index && lottery_draw_param.totalCount == count) {
 									that.$emit('luck_draw_finish', that.grid_info_arr[index])
 									// console.log('抽到了')
 								}

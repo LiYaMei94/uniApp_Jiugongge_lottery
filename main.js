@@ -1,4 +1,4 @@
-import pc from './utils/pc.js'
+// import pc from './utisssls/pc.js'
 import Vue from 'vue'
 import App from './App'
 
